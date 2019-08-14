@@ -1,0 +1,60 @@
+Microsoft (R) Macro Assembler Version 5.10                  8/14/19 10:16:16
+                                                             Page     1-1
+
+
+				.model small
+				.data
+				
+ 0000  0019			a dw 25
+ 0002  001E			b dw 30
+ 0004  000C			c dw 12
+				
+				.code
+ 0000  B8 ---- R		mov ax, @data
+ 0003  8E D8			mov ds,ax
+ 0005  A1 0000 R		mov ax,a
+ 0008  8B 1E 0002 R		mov bx,b
+ 000C  8B 0E 0004 R		mov cx,c
+ 0010  03 C3			add ax,bx
+ 0012  2B C1			sub ax,cx
+ 0014  B4 4C			mov ah,4ch
+ 0016  CD 21			int 21h
+				end
+Microsoft (R) Macro Assembler Version 5.10                  8/14/19 10:16:16
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	0006	WORD	PUBLIC	'DATA'
+_TEXT  . . . . . . . . . . . . .  	0018	WORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+A  . . . . . . . . . . . . . . .  	L WORD	0000	_DATA
+
+B  . . . . . . . . . . . . . . .  	L WORD	0002	_DATA
+
+C  . . . . . . . . . . . . . . .  	L WORD	0004	_DATA
+
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT		
+@CODESIZE  . . . . . . . . . . .  	TEXT  0		
+@CPU . . . . . . . . . . . . . .  	TEXT  0101h		
+@DATASIZE  . . . . . . . . . . .  	TEXT  0		
+@FILENAME  . . . . . . . . . . .  	TEXT  lab1		
+@VERSION . . . . . . . . . . . .  	TEXT  510		
+
+
+     18 Source  Lines
+     18 Total   Lines
+     19 Symbols
+
+  46722 + 446538 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors
